@@ -52,8 +52,8 @@ namespace CompAndDel
         //ejercicio 3
         /*
         var uploadTwitter = new Upload2Twitter();
-        string text = "Luke el capo";
-        string pathToImage = @"lukeEditado2.jpg";
+        string text = "hijo de anakin";
+        string pathToImage = @"luke2.jpg";
         Console.WriteLine(uploadTwitter.UploadImageToTwitter(text, pathToImage));
         */
 
