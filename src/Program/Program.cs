@@ -2,9 +2,11 @@
 using CompAndDel.Pipes;
 using CompAndDel.Filters;
 using Ucu.Poo.Twitter;
+using Ucu.Poo.Cognitive;
+using System.Drawing;
 
-namespace CompAndDel
-{
+namespace CompAndDel;
+
     class Program
     {
         static void Main(string[] args)
@@ -58,9 +60,44 @@ namespace CompAndDel
         */
 
         //ejercicio 4
-        
+        /*
+        {
+        CognitiveFace cog = new CognitiveFace(true, Color.GreenYellow); //no reconoce la cara porque no esta a color
+        cog.Recognize(@"beer.jpg");
+        FoundFace(cog);
+        }
+
+        void FoundFace(CognitiveFace cog)
+        {
+        if (cog.FaceFound)
+        {
+        Console.WriteLine("Face Found!");
+        IFilter filter1 = new FilterGreyscale();
+        IPipe pipe1 = new PipeSerial(filter1, new PipeNull());
+        IPicture picture = provider.GetPicture(@"luke.jpg"); // Obtener la imagen nuevamente
+        IPicture picture1 = pipe1.Send(picture);
+        provider.SavePicture(picture1, @"HayCara.jpg");
+
+        if (cog.GlassesFound)
+        {
+            Console.WriteLine("Tiene Lentes 🤓");
+        }
+        else
+        {
+            Console.WriteLine("No tiene lentes");
+        }
+        }
+        else
+            Console.WriteLine("No Hay Cara");
+            IFilter filter2 = new FilterNegative();
+            IPipe pipe2 = new PipeSerial(filter2, new PipeNull());
+            IPicture picturea = provider.GetPicture(@"luke.jpg"); // Obtener la imagen nuevamente
+            IPicture pictureb = pipe2.Send(picturea);
+            provider.SavePicture(pictureb, @"NoTieneCara.jpg");
+        }
+            */
         }
     }
-}
+        
 
 
